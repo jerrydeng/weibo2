@@ -146,6 +146,10 @@ module Weibo2
     def comments
       @comments ||= Weibo2::Interface::Comments.new(self)
     end
+
+    def common
+      @common ||= Weibo2::Interface::Common.new(self)
+    end    
     
     def favorites
       @favorites ||= Weibo2::Interface::Favorites.new(self)
