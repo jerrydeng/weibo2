@@ -60,8 +60,13 @@ module Weibo2
       id = Weibo2::Config.api_key
       secret = Weibo2::Config.api_secret
       @redirect_uri = Weibo2::Config.redirect_uri
+
+      if opts[:version] == 1
+        site = "https://api.t.sina.com.cn/"
+      else
+        site = "https://api.weibo.com/2/"
       
-      options = {:site          => "https://api.weibo.com/2/",
+      options = {:site          => site,
                  :authorize_url => "/oauth2/authorize",
                  :token_url     => "/oauth2/access_token",
                  :raise_errors  => false,
