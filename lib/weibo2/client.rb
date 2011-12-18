@@ -65,6 +65,7 @@ module Weibo2
         site = "https://api.t.sina.com.cn/"
       else
         site = "https://api.weibo.com/2/"
+      end
       
       options = {:site          => site,
                  :authorize_url => "/oauth2/authorize",
