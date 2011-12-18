@@ -113,6 +113,11 @@ module Weibo2
       def statuses(opts={})
         get 'search/statuses.json', :params => opts
       end
+
+      # @see http://open.weibo.com/wiki/search/statuses
+      def statuses_v1(opts={})
+        get 'search/statuses.json', :params => opts.merge({:site => 'http://api.t.sina.com.cn/'}})
+      end      
       
       # 获取指定地点周边的微博列表 [Privilege]
       #
