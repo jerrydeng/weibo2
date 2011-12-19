@@ -111,7 +111,12 @@ module Weibo2
       #
       # @see http://open.weibo.com/wiki/2/search/statuses
       def statuses(opts={})
-        get 'search/statuses.json', :params => opts
+        # uses version 1 search URL when specified
+        if opts[:version] == 1
+          get 'statuses/search.json', :params => opts
+        else
+          get 'search/statuses.json', :params => opts
+        end
       end
       
       # 获取指定地点周边的微博列表 [Privilege]
