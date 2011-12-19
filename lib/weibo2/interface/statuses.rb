@@ -295,6 +295,11 @@ module Weibo2
       def emotions(opts={})
         get 'emotions.json', :params => opts
       end
+
+      # Version 1 search statuses
+      def search(opts={})
+        get 'statuses/search.json', :params => opts
+      end
     end
   end
 end
