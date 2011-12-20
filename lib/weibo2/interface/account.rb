@@ -204,7 +204,7 @@ module Weibo2
       # End session action
       # @see http://open.weibo.com/wiki/2/account/end_session
       def end_session(opts={})
-        post 'account/session.json', :body => opts
+        get 'account/end_session.json', :params => opts
       end      
     end
   end
