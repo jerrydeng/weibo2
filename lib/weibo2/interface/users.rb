@@ -37,7 +37,12 @@ module Weibo2
       def show_batch(opts={})
         get "users/show_batch.json", :params => opts
       end
-      
+
+      # V1 API User search
+      # @see http://open.weibo.com/wiki/Users/search/en
+      def search(opts={})
+        get "users/search.json", :params => opts
+      end
     end
   end
 end
