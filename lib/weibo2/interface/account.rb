@@ -200,6 +200,12 @@ module Weibo2
       def update_privacy(opts={})
         post 'account/update_privacy.json', :body => opts
       end
+
+      # End session action
+      # @see http://open.weibo.com/wiki/2/account/end_session
+      def end_session(opts={})
+        post 'account/session.json', :body => opts
+      end      
     end
   end
 end
