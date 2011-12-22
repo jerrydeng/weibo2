@@ -300,6 +300,11 @@ module Weibo2
       def search(opts={})
         get 'statuses/search.json', :params => opts
       end
+
+      # @see http://open.weibo.com/wiki/2/statuses/count
+      def count(opts={})
+        get 'statuses/count.json', :params => opts
+      end        
     end
   end
 end
