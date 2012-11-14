@@ -110,8 +110,20 @@ module Weibo2
       # @option opts [int] :base_app      是否只获取当前应用的数据。0为否（所有数据），1为是（仅当前应用），默认为0
       #
       # @see http://open.weibo.com/wiki/2/search/statuses
-      def statuses(opts={})
-        get 'search/statuses.json', :params => opts
+      #def statuses(opts={})
+      #  get 'search/statuses.json', :params => opts
+      #end
+
+      # 搜索与指定的一个或多个条件相匹配的微博 [Privilege]
+      #
+      # @param [Hash] opts
+      # @option opts [String] :q          搜索的关键字
+      # @option opts [int] :count         单页返回的记录条数，默认为10
+      # @option opts [int] :page          返回结果的页码，默认为1
+      #
+      # @see http://open.weibo.com/wiki/2/search/topics
+      def topics(opts={})
+        get 'search/topics.json', :params => opts
       end
       
       # 获取指定地点周边的微博列表 [Privilege]
