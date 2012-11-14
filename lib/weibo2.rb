@@ -1,5 +1,4 @@
 require 'weibo2/client'
-require 'weibo2/client_v1'
 require 'weibo2/config'
 require 'weibo2/error'
 require 'weibo2/strategy/auth_code.rb'
